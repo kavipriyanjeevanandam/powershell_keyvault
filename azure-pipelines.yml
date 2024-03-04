@@ -1,6 +1,3 @@
-trigger:
-- master
-
 pool:
   name: Elanthamilan  # Replace with the name of your self-hosted agent pool
 
