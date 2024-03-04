@@ -12,7 +12,7 @@ jobs:
 
   - task: AzurePowerShell@5
     inputs:
-      azureSubscription: 'Pay-As-You-Go (66a13570-6644-4894-bb1a-2fbea6c65d07)'
+      azureSubscription: 'keyvault-fl'
       ScriptType: 'InlineScript'
       Inline: |
         $keyVaultName = "keyvault-fl-k"
