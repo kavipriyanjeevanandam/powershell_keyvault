@@ -19,12 +19,12 @@ jobs:
         
         $securepassword = ConvertTo-SecureString $password -AsPlainText -Force
         
-        Set-AzKeyVaultSecret -VaultName $keyVaultName -Name $username -SecretValue $securepassword
-        
-        Write-Host "Password for '$username' is created."
-        
-        $passworddownload = Get-AzKeyVaultSecret -VaultName $keyVaultName -Name $username -AsPlainText
-        
-        Write-Host "Password for $username is $passworddownload."
       azurePowerShellVersion: 'LatestVersion'
     displayName: 'Run PowerShell Script'
+
+- job: AnotherJob
+  displayName: 'Another Job'
+  dependsOn: RunPowerShellScript
+  steps:
+  - script: echo "This is Another Job"
+    displayName: 'Run Another Job'
