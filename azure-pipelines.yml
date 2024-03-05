@@ -12,12 +12,9 @@ jobs:
       Inline: |
         $keyVaultName = "keyvault-fl-k"
         $username = "sql-user11"
-        
         $password = -join ((65..90 + 97..122 + 48..57 + 33 + 35..38 + 42 + 64 + 95) | Get-Random -Count 12 | ForEach-Object {[char]$_})
         
         Write-Host "$password"
-        
-        $securepassword = ConvertTo-SecureString $password -AsPlainText -Force
         
       azurePowerShellVersion: 'LatestVersion'
     displayName: 'Run PowerShell Script'
