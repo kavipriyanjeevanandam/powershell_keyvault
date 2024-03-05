@@ -1,5 +1,5 @@
 pool:
-  name: Elanthamilan  # Replace with the name of your self-hosted agent pool
+  name: Elanthamilan  
 
 jobs:
 - job: RunPowerShellScript
