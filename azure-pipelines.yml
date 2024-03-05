@@ -5,8 +5,6 @@ jobs:
 - job: RunPowerShellScript
   displayName: 'Run PowerShell Script'
   steps:
-  - checkout: self
-
   - task: AzurePowerShell@5
     inputs:
       azureSubscription: 'keyvault-fl'
