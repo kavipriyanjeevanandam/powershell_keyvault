@@ -3,7 +3,6 @@ pool:
 
 jobs:
 - job: RunPowerShellScript
-  displayName: 'Run PowerShell Script'
   steps:
   - task: AzurePowerShell@5
     inputs:
