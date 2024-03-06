@@ -1,0 +1,11 @@
+trigger: none
+pr: none
+pool: Elanthamilan
+resources:
+  webhooks:
+    - webhook: azdevops
+      connection: azdevops
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
